@@ -1,0 +1,20 @@
+{
+    "name": "supplyhog/linux-phantomjs",
+    "description": "Contains and Installs the Bin for PhantomJs",
+    "license": "BSD",
+    "authors": [
+        {
+            "name": "Wil Wade",
+            "email": "wil@supplyhog.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "LinuxPhantom\\": "src",
+        }
+    },
+    "require": {
+        "php": ">=5.3"
+    }
+}
