@@ -29,7 +29,7 @@ class Installer
 
         $sourceName = __DIR__ . '/bin/phantomjs';
         $targetName = $composerBinDir . '/phantomjs';
-        link($sourceName, $targetName);
+        link($targetName, $sourceName);
         chmod($targetName, 0755);
     }
 }
