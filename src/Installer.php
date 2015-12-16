@@ -29,7 +29,9 @@ class Installer
 
 	$targetName = '../supplyhog/linux-phantomjs/bin/phantomjs';
         $linkName = $composerBinDir . '/phantomjs';
-	unlink($linkName);
+	if(file_exists($linkName)) {
+		unlink($linkName);
+	}
         symlink($targetName, $linkName);
     }
 }
