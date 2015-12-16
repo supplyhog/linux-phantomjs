@@ -29,10 +29,7 @@ class Installer
 
         $sourceName = '/bin/phantomjs';
         $targetName = $composerBinDir . '/phantomjs';
-
-        if ($os !== 'unknown') {
-            copy(self::PHANTOMJS_TARGETDIR . $sourceName, $targetName);
-            chmod($targetName, 0755);
-        }
+        copy(self::PHANTOMJS_TARGETDIR . $sourceName, $targetName);
+        chmod($targetName, 0755);
     }
 }
