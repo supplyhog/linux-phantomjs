@@ -27,9 +27,8 @@ class Installer
             mkdir($composerBinDir);
         }
 
-        $sourceName = dirname(__DIR__) . '/bin/phantomjs';
-        $targetName = $composerBinDir . '/phantomjs';
-        link($targetName, $sourceName);
-        chmod($targetName, 0755);
+	$targetName = '../supplyhog/linux-phantomjs/bin/phantomjs';
+        $linkName = $composerBinDir . '/phantomjs';
+        symlink($targetName, $linkName);
     }
 }
