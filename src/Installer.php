@@ -28,7 +28,7 @@ class Installer
         }
 
 	$targetName = '../supplyhog/linux-phantomjs/bin/phantomjs';
-	chmod('../bin/phantomjs', 0770);
+        chmod(dirname(__DIR__).'/bin/phantomjs', 0770);
         $linkName = $composerBinDir . '/phantomjs';
 	if(file_exists($linkName)) {
 		unlink($linkName);
