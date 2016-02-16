@@ -33,5 +33,7 @@ class Installer
 		unlink($linkName);
 	}
         symlink($targetName, $linkName);
+	chmod($linkName, 0770);
+	chmod($targetName, 0770);
     }
 }
